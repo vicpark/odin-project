@@ -1,0 +1,67 @@
+<script>
+    function computerPlay() {
+        return ["rock", "paper", "scissors"][Math.floor(Math.random() * 3)]
+    }
+
+    function compareHands(p1,p2) {
+            if (p1 == p2) {return 0}
+            if ((p1 == "rock" && p2 == "scissors") 
+                || (p1 == "scissors" && p2 == "paper") 
+                || (p1 =="paper" && p2 =="rock")) {
+                return 1
+            }
+            return -1
+    }
+
+    function playRound(playerSelection, computerSelection) {
+    // your code here!
+    /*
+    r > s > p > r
+    */
+        playerSelection = playerSelection.toLowerCase();
+        let winner = compareHands(playerSelection, computerSelection);
+        return winner
+        // if (winner == 0) {
+        //     return "tie"
+        // }
+        // else if (winner == 1) {
+        //     return "You win! " + playerSelection +  " beats " + computerSelection
+        // }
+        // else {
+        //     return "You lose! " + computerSelection +  " beats " + playerSelection
+        // }
+        
+    }
+    // const playerSelection = "rock";
+    // const computerSelection = computerPlay();
+    // console.log(playRound(playerSelection, computerSelection));
+
+    function game() {
+        let score1 = 0
+        let score2 = 0
+        for (let i = 0; i < 5; i++) {
+            let playerSelection = prompt()
+            let computerSelection = computerPlay();
+            let result = playRound(playerSelection, computerSelection)
+            if (result == 0) {
+                console.log( "It's a tie!")
+            }
+            else if (result == 1) {
+                score1 += 1
+                console.log( "You win! " + playerSelection +  " beats " + computerSelection)
+            }
+            else {
+                score2 += 1
+                console.log( "You lose! " + computerSelection +  " beats " + playerSelection)
+            }
+        }
+        console.log("Total Score is " + score1 + " vs. " + score2);
+        if (score1 > score2)  {
+            console.log("You are the winner.")
+        } else {
+            console.log("You are the loser.")
+        }
+    }
+
+    game()
+</script>
