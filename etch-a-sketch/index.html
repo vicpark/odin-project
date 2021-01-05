@@ -1,0 +1,46 @@
+<!doctype html>
+
+
+
+<html>
+    <head>
+        <title>Etch A Sketch</title>
+        
+    
+        <style>
+            body {
+                margin: 0;
+
+            }
+
+            #container {
+                display: flex;
+                height: 1000px;
+                width: 1000px;
+                flex-flow: row wrap;
+                justify-content: center;
+                align-items: stretch;
+                align-content: stretch;
+            }
+            .square {
+                width: 250px;
+                height: 250px;
+                margin: auto;
+                background: white;
+                filter: brightness(100%);
+            }
+
+            /* .square:hover {
+                background: gray;
+            } */
+        </style>
+
+    </head>
+        
+    
+    <body>
+        <button id="clearBtn">Clear Grid</button>
+        <div id="container"></div>
+        <script src="script.js"></script>
+    </body>
+</html>
