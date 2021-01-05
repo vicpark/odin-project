@@ -1,0 +1,56 @@
+<!doctype html>
+
+
+
+<html>
+    <head>
+        <title>Etch A Sketch</title>
+        
+    
+        <style>
+            body {
+                margin: 0;
+
+            }
+
+            #container {
+                display: flex;
+                height: 1000px;
+                width: 1000px;
+                flex-flow: row wrap;
+                justify-content: center;
+                align-items: stretch;
+                align-content: stretch;
+            }
+            .square {
+                width: 250px;
+                height: 250px;
+                margin: auto;
+                background: white;
+                filter: brightness(100%);
+            }
+
+            #nav {
+                display: flex;
+                justify-content: center;
+                /* background: black; */
+            }
+            #clearBtn {
+                margin: 20px;
+            }
+            
+
+        </style>
+
+    </head>
+        
+    
+    <body>
+        <div id="nav">
+            <button id="clearBtn">New Grid</button>
+        </div>
+        
+        <div id="container"></div>
+        <script src="./script.js"></script>
+    </body>
+</html>
