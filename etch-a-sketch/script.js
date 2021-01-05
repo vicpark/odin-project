@@ -7,7 +7,7 @@ clearBtn.addEventListener('click',createNewGrid);
 function createNewGrid() {
     // empty container
     // create n squares with size 1000/n
-    let n = parseInt(prompt('How many'));
+    let n = parseInt(prompt('Enter a number to create a new nxn grid.'));
     if (n > 100) {
         alert('Choose a number less than 100');
         return;
