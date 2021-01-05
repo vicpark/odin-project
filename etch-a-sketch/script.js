@@ -7,13 +7,14 @@ clearBtn.addEventListener('click',createNewGrid);
 function createNewGrid() {
     // empty container
     // create n squares with size 1000/n
-    let n = parseInt(prompt('Enter a number to create a new nxn grid.'));
+    let n = parseInt(prompt('Enter a number to create a new NxN grid'));
     if (n > 100) {
         alert('Choose a number less than 100');
         return;
     }
     container.innerHTML = '';
-    for (let i = 0; i < n*n; i++) {
+    let numSquares = n*n;
+    for (let i = 0; i < numSquares; i++) {
         squareDiv = document.createElement("div");
         squareDiv.classList.add('square');
         squareDiv.style.height = 1000/n + 'px';
