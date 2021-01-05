@@ -30,16 +30,26 @@
                 filter: brightness(100%);
             }
 
-            /* .square:hover {
-                background: gray;
-            } */
+            #nav {
+                display: flex;
+                justify-content: center;
+                /* background: black; */
+            }
+            #clearBtn {
+                margin: 20px;
+            }
+            
+
         </style>
 
     </head>
         
     
     <body>
-        <button id="clearBtn">New Grid</button>
+        <div id="nav">
+            <button id="clearBtn">New Grid</button>
+        </div>
+        
         <div id="container"></div>
         <script src="./script.js"></script>
     </body>
