@@ -90,7 +90,7 @@ border-radius: 50%;
 
 
 #container {
-
+    touch-action: manipulation;
     background: #dedede;
     margin: auto;
     padding: 5px;
