@@ -136,6 +136,7 @@ border-radius: 50%;
 
 /* BUTTON RULES */
 #buttonsContainer {
+    touch-action: manipulation;
     /* background: pink; */
     margin: 2px ;
     width: 400px;
