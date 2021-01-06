@@ -1,0 +1,198 @@
+body {
+    background: #111;
+    margin: 0;
+    padding: 0;
+    font-size: medium;
+    font-family:'Courier New', Courier, monospace;
+}
+
+#nav{
+    background: black;
+    color: whitesmoke;
+    height: 30px;
+    text-align: center;
+    font-size: 2em;
+    padding: 10px;
+}
+
+
+
+/* TOGGLE SWITCH */
+
+#toggleDiv {
+    padding-top: 80px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+/* The switch - the box around the slider */
+.switch {
+position: relative;
+display: inline-block;
+width: 60px;
+height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+opacity: 0;
+width: 0;
+height: 0;
+}
+
+/* The slider */
+.slider {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #111;
+-webkit-transition: .4s;
+transition: .4s;
+}
+
+.slider:before {
+position: absolute;
+content: "";
+height: 26px;
+width: 26px;
+left: 4px;
+bottom: 4px;
+background-color: white;
+-webkit-transition: .4s;
+transition: .4s;
+}
+
+input:checked + .slider {
+background-color: #ccc;
+}
+
+input:focus + .slider {
+box-shadow: 0 0 1px #ccc;
+}
+
+input:checked + .slider:before {
+-webkit-transform: translateX(26px);
+-ms-transform: translateX(26px);
+transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+border-radius: 34px;
+}
+
+.slider.round:before {
+border-radius: 50%;
+}
+/*CALCULATOR RULES*/
+
+
+#container {
+
+    background: #dedede;
+    margin: auto;
+    padding: 5px;
+    height: 704px; 
+    width: 404px;
+    border-radius: 20px;
+
+    display: grid;
+    grid-template-rows: 200px 400px;
+    grid-row-gap: 2px;
+}
+
+
+/* DISPLAY RULES */
+
+#display {
+    background:white;
+    color: #5d5d5d;
+    margin: 2px;
+    /* padding: 10px; */
+    height: 200px;
+    width: 400px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: auto auto;
+    /* text-align: right; */
+    
+}
+#inputDiv, #answerDiv {
+    margin: 20px;
+    position: relative;
+}
+
+#answerSpan {
+    font-size: xx-large;
+}
+
+.bottomRight {
+    position:absolute;
+    bottom:0;
+    right:0;
+}
+
+/* BUTTON RULES */
+#buttonsContainer {
+    /* background: pink; */
+    margin: 2px ;
+    width: 400px;
+    height: 500px;
+
+    display:grid;
+    grid-template-rows: 100px 400px;
+    
+}
+#topBar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0;
+    /* width: 400px; */
+    height: 100px;
+    /* background: maroon; */
+
+}
+
+#bottomDiv {
+    display:grid;
+    grid-template-columns: 300px 100px;
+    height: 400px;
+    
+}
+    #digitsDiv {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+    }
+    
+
+
+button {
+    width: 96px;
+    height: 96px;
+    margin: 2px;
+    padding: 0px;
+    background: white;
+    color: #5d5d5d;
+    font-family:'Courier New', Courier, monospace;
+    font-size: large;
+    filter: brightness(100%);
+    border: none;
+    transition-duration: 0.4s;
+}
+button:hover {
+    background: black;
+    color: white;
+}
+button:active {
+    background: black;
+    box-shadow: 0 5px #111;
+    transform: translateY(4px);
+}
+button:focus {
+    outline: none;
+    box-shadow: none;
+}
