@@ -1,0 +1,186 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Calculator</title>
+        
+    
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                font-size: medium;
+                font-family:'Courier New', Courier, monospace;
+            }
+            
+            /*CALCULATOR RULES*/
+            
+            #nav{
+                background: lightgray;
+                height: 30px;
+            }
+            #container {
+            
+                background: black;
+                margin: 50px auto;
+                padding: 5px;
+                height: 704px; 
+                width: 404px;
+                border-radius: 20px;
+
+                display: grid;
+                grid-template-rows: 200px 400px;
+                grid-row-gap: 2px;
+            }
+
+
+            /* DISPLAY RULES */
+
+            #display {
+                background:#111;
+                color: white;
+                margin: 2px;
+                /* padding: 10px; */
+                height: 200px;
+                width: 400px;
+                border-radius: 10px;
+                display: grid;
+                grid-template-rows: auto auto;
+                /* text-align: right; */
+                
+            }
+            #inputDiv, #answerDiv {
+                margin: 20px;
+                position: relative;
+            }
+
+            #answerSpan {
+                font-size: xx-large;
+            }
+
+            .bottomRight {
+                position:absolute;
+                bottom:0;
+                right:0;
+            }
+
+            /* BUTTON RULES */
+            #buttonsContainer {
+                /* background: pink; */
+                margin: 2px ;
+                width: 400px;
+                height: 500px;
+
+                display:grid;
+                grid-template-rows: 100px 400px;
+                
+            }
+            #topBar {
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                padding: 0;
+                /* width: 400px; */
+                height: 100px;
+                /* background: maroon; */
+
+            }
+
+            #bottomDiv {
+                display:grid;
+                grid-template-columns: 300px 100px;
+                height: 400px;
+                
+            }
+                #digits {
+                    display: flex;
+                    flex-flow: row wrap;
+                    justify-content: space-evenly;
+                }
+                #operators {
+                    /* background: maroon; */
+                }
+
+
+            button {
+                width: 96px;
+                height: 96px;
+                margin: 2px;
+                padding: 0px;
+                background: #111;
+                color: lightgray;
+                font-family:'Courier New', Courier, monospace;
+                font-size: large;
+                filter: brightness(100%);
+                border: none;
+                transition-duration: 0.4s;
+            }
+            button:hover {
+                background: white;
+                color: black;
+                border: 2px solid black;
+            }
+            button:active {
+                background: white;
+                box-shadow: 0 5px #111;
+                transform: translateY(4px);
+            }
+            button:focus {
+                outline: none;
+                box-shadow: none;
+            }
+
+        </style>
+
+    </head>
+        
+    
+    <body>
+        
+        <div id="nav"></div>
+        <div id="container">
+            <div id="display">
+                <div id="inputDiv">
+                    <span id="inputSpan" class="bottomRight"></span>
+                </div>
+                <div id="answerDiv">
+                    <span id="answerSpan" class="bottomRight"></span>
+                </div>
+                
+            </div>
+            <div id="buttonsContainer">
+                <div id="topBar">
+                    <button>(</button>
+                    <button>)</button>
+                    <button>%</button>
+                    <button id="clearBtn">AC</button>
+                </div>
+                <div id="bottomDiv">
+                    <div id="digits">
+                        <button>7</button>
+                        <button>8</button>
+                        <button>9</button>
+                        <button>4</button>
+                        <button>5</button>
+                        <button>6</button>
+                        <button>1</button>
+                        <button>2</button>
+                        <button>3</button>
+                        <button>0</button>
+                        <button>.</button>
+                        <button id="equalBtn">=</button>
+                    </div>
+                    <div id="operators">
+                        <button>/</button>
+                        <button>*</button>
+                        <button>-</button>
+                        <button>+</button>
+                    </div>
+                </div>
+                
+            </div>
+            
+
+        </div>
+        <script src="./script.js"></script>
+    </body>
+</html>
